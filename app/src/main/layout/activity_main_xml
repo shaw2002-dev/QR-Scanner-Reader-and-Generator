@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backround"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="306dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/Scanner_view"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="653dp"
+        android:text="QR Code Reader"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="35sp" />
+
+    <com.budiyev.android.codescanner.CodeScannerView
+       android:layout_width="match_parent"
+       android:layout_height="350dp"
+       android:id="@+id/Scanner_view"
+       android:padding="10dp"
+       app:frameCornersRadius="10dp"
+       android:background="@drawable/shape"
+       app:autoFocusButtonColor="@color/white"
+       app:autoFocusButtonVisible="true"
+       app:flashButtonColor="@color/white"
+       android:layout_centerInParent="true"
+       app:flashButtonVisible="true"
+       app:maskColor="#7B000000"/>
+
+    <TextView
+        android:id="@+id/tv_textView"
+        android:layout_width="306dp"
+        android:layout_height="111dp"
+        android:layout_below="@id/Scanner_view"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:autoLink="web"
+        android:linksClickable="true"
+        android:textColorLink="@android:color/holo_blue_dark"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="59dp"
+        android:text="Scan Something..."
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/Generatebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Scanner_view"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="40dp"
+        android:text="Create QR" />
+
+
+</RelativeLayout>
